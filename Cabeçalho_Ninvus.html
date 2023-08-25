@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    #header {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        background-color: #181818;
+        padding: 40px 115px;
+    }
+
+    #logo {
+        max-width: 200px;
+        margin-right: auto;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .menu-link {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 25px;
+        padding: 0px 15px;
+    }
+
+    .menu-link:hover {
+        color: #01CC63;
+    }
+
+    #headerButton {
+        text-decoration: none;
+        color: #000000;
+        background-color: #01CC63;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 14px 36px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    #headerButton:hover {
+        background-color: #07944d;
+        color: #ffffff;
+    }
+</style>
+</head>
+<body>
+<div id="header">
+    <a href="https://www.ninvusassessoria.com.br/"><img id="logo" src="https://i.imgur.com/M5jODc2.png" alt="Logo"></a>
+    <nav id="menu">
+        <a class="menu-link" href="https://ninvusassessoria.com.br">Início</a>
+        <a class="menu-link" href="https://www.ninvusassessoria.com.br/sobre-a-ninvus">Sobre</a>
+        <a class="menu-link" href="https://www.ninvusassessoria.com.br/contact-z9Mtzt">Contato</a>
+    </nav>
+    <a href="https://www.ninvusassessoria.com.br/cadastro" id="headerButton">Registre sua marca</a>
+</div>
+<script>
+    setInterval(() => {
+        if (!document.querySelector('#headerButton')) {
+            document.querySelector('#header').insertAdjacentHTML("beforeend", '<a href="https://www.ninvusassessoria.com.br/cadastro" id="headerButton">Registre sua marca</a>');
+        }
+    });
+</script>
+</body>
+</html>
